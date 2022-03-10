@@ -1,5 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
+import  Home from './conponents/Home';
+import  AddUser from './conponents/AddUser';
+import  EditUser from './conponents/EditUser';
 
 function App() {
   return (
@@ -18,8 +21,10 @@ function App() {
           Learn React
         </a>
       </header>
+      <Home/>
+      <AddUser/>
+      <EditUser/>
     </div>
   );
 }
-
 export default App;
