@@ -6,21 +6,22 @@ import  Home from './conponents/Home';
 import  AddUser from './conponents/AddUser';
 import  EditUser from './conponents/EditUser';
 import 'bootstrap/dist/css/bootstrap.min.css'
+import {GlobalProvider} from  './context/GlobalState';
+
 
 function App() {
   return (
-    <div className="App">    
+    <div style={{maxWidth:"30rem",margin:"1rem auto"}} className="App">   
+    <GlobalProvider>
       <Router> 
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <h1> Nav </h1>
-       </header>
         <Routes>
           <Route exact path='/add' element ={<AddUser/>}/>
           <Route path='/edit/:id' element ={<EditUser/>}/>
           <Route path='/' element ={<Home/>}/>
         </Routes>
-      </Router>
+      </Router>      
+      </GlobalProvider> 
      
     </div>
   );
